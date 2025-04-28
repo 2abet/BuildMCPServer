@@ -3,9 +3,15 @@ from mcp.server.fastmcp import FastMCP
 import json
 import requests
 from typing import List
+import logging
 
 # Server created
 mcp = FastMCP("churnandburn")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    filename="mcp_serve.log", 
+)
 
 
 # Create the tool
